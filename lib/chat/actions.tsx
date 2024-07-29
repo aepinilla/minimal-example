@@ -107,7 +107,7 @@ async function confirmPurchase(symbol: string, price: number, amount: number) {
 }
 
 // Configuring Maximum Duration for Vercel Functions
-export const maxDuration = 5; // This function can run for a maximum of 5 seconds
+export const maxDuration = 300; // This function can run for a maximum of 5 seconds
 export const dynamic = 'force-dynamic';
 async function submitUserMessage(content: string) {
   'use server'
