@@ -316,6 +316,8 @@ async function submitUserMessage(content: string) {
             )
         }),
         generate: async function* ({ symbol, price, numberOfShares = 100 }) {
+          await sleep(16000)
+
           const toolCallId = nanoid()
 
           if (numberOfShares <= 0 || numberOfShares > 1000) {
