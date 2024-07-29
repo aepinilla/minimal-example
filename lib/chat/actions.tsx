@@ -106,6 +106,9 @@ async function confirmPurchase(symbol: string, price: number, amount: number) {
   }
 }
 
+// Configuring Maximum Duration for Vercel Functions
+export const maxDuration = 5; // This function can run for a maximum of 5 seconds
+export const dynamic = 'force-dynamic';
 async function submitUserMessage(content: string) {
   'use server'
 
@@ -315,7 +318,9 @@ async function submitUserMessage(content: string) {
               'The **number of shares** for a stock or currency to purchase. Can be optional if the user did not specify it.'
             )
         }),
+        
         generate: async function* ({ symbol, price, numberOfShares = 100 }) {
+          // Adding delay to simulate a real-world scenario
           await sleep(16000)
 
           const toolCallId = nanoid()
