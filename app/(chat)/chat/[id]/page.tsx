@@ -7,6 +7,11 @@ import { Chat } from '@/components/chat'
 import { AI } from '@/lib/chat/actions'
 import { Session } from '@/lib/types'
 
+
+// Configuring Maximum Duration for Vercel Functions
+export const maxDuration = 300; // This function can run for a maximum of 300 seconds
+export const dynamic = 'force-dynamic';
+
 export interface ChatPageProps {
   params: {
     id: string
