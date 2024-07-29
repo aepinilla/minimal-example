@@ -7,6 +7,10 @@ import { kv } from '@vercel/kv'
 import { auth } from '@/auth'
 import { type Chat } from '@/lib/types'
 
+// Configuring Maximum Duration for Vercel Functions
+export const maxDuration = 300; // This function can run for a maximum of 300 seconds
+export const dynamic = 'force-dynamic';
+
 export async function getChats(userId?: string | null) {
   if (!userId) {
     return []

@@ -36,10 +36,6 @@ import { SpinnerMessage, UserMessage } from '@/components/stocks/message'
 import { Chat, Message } from '@/lib/types'
 import { auth } from '@/auth'
 
-// Configuring Maximum Duration for Vercel Functions
-export const maxDuration = 300; // This function can run for a maximum of 300 seconds
-export const dynamic = 'force-dynamic';
-
 
 async function confirmPurchase(symbol: string, price: number, amount: number) {
   'use server'
