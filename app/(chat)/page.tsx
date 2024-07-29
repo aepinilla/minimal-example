@@ -5,6 +5,10 @@ import { auth } from '@/auth'
 import { Session } from '@/lib/types'
 import { getMissingKeys } from '@/app/actions'
 
+// Configuring Maximum Duration for Vercel Functions
+export const maxDuration = 300; // This function can run for a maximum of 300 seconds
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Next.js AI Chatbot'
 }
